@@ -1,0 +1,24 @@
+import caperucita.*
+import feroz.*
+import abuelita.*
+import cazador.*
+import historia.*
+
+test "caperucita pesa 63.2 kilos" {
+    assert.equals(63.2, caperucita.peso())
+}
+
+test "caperucita pesa 63 kilos al perder una manzana" {
+    caperucita.perderManzanas(1)
+    assert.equals(63, caperucita.peso())
+}
+
+test "el Lobo baja 2 kilos despues de correr 2 veces y gana otros 5 tras comer a la abuelita" {
+    assert.equals(13, feroz.peso())
+}
+
+test "el Lobo (pesando ya 13 kilos) se come a caperucita que pesa 63 kilos 
+con canasta y manzanas, ganando 6.3 kilos" {
+    finales.historiaHastaElFinal()
+    assert.equals(19.3, feroz.peso())
+}
